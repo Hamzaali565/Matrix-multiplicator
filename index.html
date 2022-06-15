@@ -1,0 +1,377 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Matrix App (MULTIPLICATION)</h1>
+        <p><b>ORDER INPUT</b></p>
+        <input  placeholder="Num input" min="2" type="text" size="5" id="input1" required>
+        <span><b>X</b></span>
+        <input  placeholder="Num input" min="2" type="text" size="5" id="input2" required>
+        <button inputmode="submit" onclick="func()">Submit</button>
+        <script>
+function func(){
+ let input1 =Number( document.querySelector('#input1').value);
+let input2 =Number( document.querySelector('#input2').value);    
+
+if(input1==""){
+alert("Kindly make sure that both fields must be filled")
+}
+else if(input2==""){
+alert("Kindly make sure that both fields must be filled")
+}
+else if(input1 != input2){
+alert("Kindly make sure that both fields must be filled with same NUMBER")
+}
+else if(input1>4 && input2>4){
+alert('inputs must be under 4.')
+}
+else if(input1==3&&input2==3){
+    document.write('<h1 style="text-align: center;"> MATRIX (3 X 3) </h1>')
+    document.write('<div style="margin-top:200px; display: flex; justify-content: space-between;">'); document.write("<table style='margin-top:10px;margin-left:300px; border: 1px solid black;'>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='i1'> </td><td><input required min='0' type='text' size='1' id='i2'> </td><td><input required min='0' type='text' size='1' id='i3'> </td>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='i4'> </td><td><input required min='0' type='text' size='1' id='i5'> </td><td><input required min='0' type='text' size='1' id='i6'> </td>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='i7'> </td><td><input required min='0' type='text' size='1' id='i8'> </td><td><input required min='0' type='text' size='1' id='i9'> </td>")
+document.write("</table>")
+document.write('<span style="margin-top:40px; font-size:30px;font-weight:bolder; ">+</span>')
+document.write("<table style='margin-top:10px; border: 1px solid black;'>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='i10'> </td><td><input required min='0' type='text' size='1' id='i11'> </td><td><input required min='0' type='text' size='1' id='i12'> </td>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='i13'> </td><td><input required min='0' type='text' size='1' id='i14'> </td><td><input required min='0' type='text' size='1' id='i15'> </td>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='i16'> </td><td><input required min='0' type='text' size='1' id='i17'> </td><td><input required min='0' type='text' size='1' id='i18'> </td>")
+document.write("</table>");
+document.write('<span style="margin-top:40px; font-size:30px;font-weight:bolder; ">=</span>')
+document.write("<table style='margin-top:10px; margin-right:300px; border: 1px solid black; background-color:lightsalmon ;'>")
+    document.write("<tr>"); document.write("<td id='i19' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i20' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i21' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+    document.write("<tr>"); document.write("<td id='i22' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i23' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i24' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+    document.write("<tr>"); document.write("<td id='i25' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i26' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i27' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+document.write("</table>");
+document.write('</div>')
+document.write('<button onclick="calc()"  style="margin-left:630px; margin-top:50px; display: flex;"> Calculate</button>')
+ 
+}
+else if(input1==2 && input2==2){
+    document.write('<h1 style="text-align: center;"> MATRIX (2 X 2) </h1>')
+    document.write('<div style="display: flex;margin-top:200px;  justify-content: space-between;">'); document.write("<table style='margin-left:200px; border: 1px solid black;'>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='j1'> </td><td><input required min='0' type='text' size='1' id='j2'> </td>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='j3'> </td><td><input required min='0' type='text' size='1' id='j4'> </td>")
+document.write("</table>")
+document.write('<span style="margin-top:40px; font-size:30px;font-weight:bolder; ">+</span>')
+document.write("<table style='margin-top:10px; border: 1px solid black;'>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='j5'> </td><td><input required min='0' type='text' size='1' id='j6'> </td>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='j7'> </td><td><input required min='0' type='text' size='1' id='j8'> </td>")
+document.write("</table>");
+document.write('<span style="margin-top:40px; font-size:30px;font-weight:bolder; ">=</span>')
+document.write("<table style='margin-top:10px; margin-right:300px; border: 1px solid black; background-color:lightsalmon ;'>")
+    document.write("<tr>"); document.write("<td id='j9' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='j10' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+    document.write("<tr>"); document.write("<td id='j11' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='j12' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+document.write("</table>");
+document.write('</div>')
+document.write('<button onclick="calco()" style="margin-left:630px; margin-top:50px; display: flex;"> Calculate</button>')
+ 
+}
+
+else if(input1==4 && input2==4){
+    document.write('<h1 style="text-align: center;"> MATRIX (4 X 4) </h1>')
+    document.write('<div style="display: flex;margin-top:200px; justify-content: space-between;">');
+document.write("<table style='margin-left:300px; border: 1px solid black;'>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k1'></td> <td><input required min='0' type='text' size='1' id='k2'></td>  <td><input required min='0' type='text' size='1' id='k3'> </td><td><input required min='0' type='text' size='1' id='k4'> </td>")
+    document.write("</tr>");
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k5'> </td> <td><input required min='0' type='text' size='1' id='k6'></td> <td><input required min='0' type='text' size='1' id='k7'> </td><td><input required min='0' type='text' size='1' id='k8'> </td>")
+    document.write("</tr>");
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k9'> </td> <td><input required min='0' type='text' size='1' id='k10'></td> <td><input required min='0' type='text' size='1' id='k11'> </td><td><input required min='0' type='text' size='1' id='k12'> </td>")
+    document.write("</tr>");
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k13'> </td> <td><input required min='0' type='text' size='1' id='k14'></td> <td><input required min='0' type='text' size='1' id='k15'> </td><td><input required min='0' type='text' size='1' id='k16'> </td>")
+    document.write("</tr>");
+document.write("</table>");
+
+document.write('<span style="margin-top:40px; font-size:30px;font-weight:bolder; ">+</span>')
+document.write("<table style='border: 1px solid black;'>")
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k17'> </td> <td><input required min='0' type='text' size='1' id='k18'></td> <td><input required min='0' type='text' size='1' id='k19'> </td><td><input required min='0' type='text' size='1' id='k20'> </td>")
+    document.write("</tr>");
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k21'> </td><td><input required min='0' type='text' size='1' id='k22'></td><td><input required min='0' type='text' size='1' id='k23'> </td><td><input required min='0' type='text' size='1' id='k24'> </td>")
+    document.write("</tr>");
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k25'></td> <td><input required min='0' type='text' size='1' id='k26'> </td><td><input required min='0' type='text' size='1' id='k27'> </td><td><input required min='0' type='text' size='1' id='k28'> </td>")
+    document.write("</tr>");
+    document.write("<tr>"); document.write("<td><input required min='0' type='text' size='1' id='k29'></td> <td><input required min='0' type='text' size='1' id='k30'> </td><td><input required min='0' type='text' size='1' id='k31'> </td><td><input required min='0' type='text' size='1' id='k32'> </td>")
+    document.write("</tr>"); 
+document.write("</table>");
+
+document.write('<span style="margin-top:40px; font-size:30px;font-weight:bolder; ">=</span>')
+document.write("<table style=' margin-right:300px; border: 1px solid black; background-color:lightsalmon ;'>")
+document.write("<tr>"); document.write("<td id='k33' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'> <td id='k34' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k35' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k36' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+document.write("</tr>");
+document.write("<tr>"); document.write("<td id='k37' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'> <td id='k38' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k39' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k40' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+document.write("</tr>");
+document.write("<tr>"); document.write("<td id='k41' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'> <td id='k42' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k43' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k44' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+document.write("</tr>");
+document.write("<tr>"); document.write("<td id='k45' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'> <td id='k46' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k47' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='k48' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
+document.write("</tr>");
+
+document.write("</table>");
+
+document.write('</div>')
+document.write('<button onclick="calcu()" style="margin-top:10px; display: flex;"> Calculate</button>')
+}
+}
+function calc(){
+let i1 = Number(document.querySelector('#i1').value);
+let i2 = Number(document.querySelector('#i2').value);
+let i3 = Number(document.querySelector('#i3').value);
+let i4 = Number(document.querySelector('#i4').value);
+let i5 = Number(document.querySelector('#i5').value);
+let i6 = Number(document.querySelector('#i6').value);
+let i7 = Number(document.querySelector('#i7').value);
+let i8 = Number(document.querySelector('#i8').value);
+let i9 = Number(document.querySelector('#i9').value);
+let i10 = Number(document.querySelector('#i10').value);
+let i11 = Number(document.querySelector('#i11').value);
+let i12 = Number(document.querySelector('#i12').value);
+let i13 = Number(document.querySelector('#i13').value);
+let i14 = Number(document.querySelector('#i14').value);
+let i15 = Number(document.querySelector('#i15').value);
+let i16 = Number(document.querySelector('#i16').value);
+let i17 = Number(document.querySelector('#i17').value);
+let i18 = Number(document.querySelector('#i18').value);
+let i19 = Number(document.querySelector('#i19').value);
+let i20 = Number(document.querySelector('#i20').value);
+let i21 = Number(document.querySelector('#i21').value);
+let i22 = Number(document.querySelector('#i22').value);
+let i23 = Number(document.querySelector('#i23').value);
+let i24 = Number(document.querySelector('#i24').value);
+let i25 = Number(document.querySelector('#i25').value);
+let i26 = Number(document.querySelector('#i26').value);
+let i27 = Number(document.querySelector('#i27').value);
+
+let z1= i1 * i10;
+let z2= i2 * i13;
+let z3= i3 * i16;
+let z4= i1 * i11;
+let z5= i2 * i14;
+let z6= i3 * i17;
+let z7= i1 * i12;
+let z8= i2 * i15;
+let z9= i3 * i18;
+let z10= i4 * i10;
+let z11= i5 * i13;
+let z12= i6 * i16;
+let z13= i4 * i11;
+let z14= i5 * i14;
+let z15= i6 * i17;
+let z16= i4 * i12;
+let z17= i5 * i15;
+let z18= i6 * i18;
+let z19= i7 * i10;
+let z20= i8 * i13;
+let z21= i9 * i16;
+let z22= i7 * i11;
+let z23= i8 * i14;
+let z24= i9 * i17;
+let z25= i7 * i12;
+let z26= i8 * i15;
+let z27= i9 * i18;
+
+
+let p1=z1+z2+z3;
+let p2=z4+z5+z6;
+let p3=z7+z8+z9;
+let p4=z10+z11+z12;
+let p5=z13+z14+z15;
+let p6=z16+z17+z18;
+let p7=z19+z20+z21;
+let p8=z22+z23+z24;
+let p9=z25+z26+z27;
+
+document.querySelector('#i19').innerHTML=p1;
+document.querySelector('#i20').innerHTML=p2;
+document.querySelector('#i21').innerHTML=p3 ;
+document.querySelector('#i22').innerHTML=p4 ;
+document.querySelector('#i23').innerHTML=p5 ;
+document.querySelector('#i24').innerHTML=p6 ;
+document.querySelector('#i25').innerHTML=p7 ;
+document.querySelector('#i26').innerHTML=p8 ;
+document.querySelector('#i27').innerHTML=p9;
+}
+function calco(){
+let j1 = Number(document.querySelector('#j1').value);
+let j2 = Number(document.querySelector('#j2').value);
+let j3 = Number(document.querySelector('#j3').value);
+let j4 = Number(document.querySelector('#j4').value);
+let j5 = Number(document.querySelector('#j5').value);
+let j6 = Number(document.querySelector('#j6').value);
+let j7 = Number(document.querySelector('#j7').value);
+let j8 = Number(document.querySelector('#j8').value);
+
+let l1 = j1 * j5;
+let l2 = j2 * j7;
+let l3 = j1 * j6;
+let l4 = j2 * j8;
+let l5 = j3 * j5;
+let l6 = j4 * j7;
+let l7 = j3 * j6;
+let l8 = j4 * j8;
+
+let q1 = l1 +l2; 
+let q2 = l3 +l4;
+let q3 = l5 +l6;
+let q4 = l7 +l8;
+
+
+document.querySelector('#j9').innerHTML=q1;
+document.querySelector('#j10').innerHTML=q2 ;
+document.querySelector('#j11').innerHTML=q3 ;
+document.querySelector('#j12').innerHTML=q4;
+}
+function calcu(){
+let k1 = Number(document.querySelector('#k1').value);
+let k2 = Number(document.querySelector('#k2').value);
+let k3 = Number(document.querySelector('#k3').value);
+let k4 = Number(document.querySelector('#k4').value);
+let k5 = Number(document.querySelector('#k5').value);
+let k6 = Number(document.querySelector('#k6').value);
+let k7 = Number(document.querySelector('#k7').value);
+let k8 = Number(document.querySelector('#k8').value);
+let k9 = Number(document.querySelector('#k9').value);
+let k10 = Number(document.querySelector('#k10').value);
+let k11 = Number(document.querySelector('#k11').value);
+let k12 = Number(document.querySelector('#k12').value);
+let k13 = Number(document.querySelector('#k13').value);
+let k14 = Number(document.querySelector('#k14').value);
+let k15 = Number(document.querySelector('#k15').value);
+let k16 = Number(document.querySelector('#k16').value);
+let k17 = Number(document.querySelector('#k17').value);
+let k18 = Number(document.querySelector('#k18').value);
+let k19 = Number(document.querySelector('#k19').value);
+let k20 = Number(document.querySelector('#k20').value);
+let k21 = Number(document.querySelector('#k21').value);
+let k22 = Number(document.querySelector('#k22').value);
+let k23 = Number(document.querySelector('#k23').value);
+let k24 = Number(document.querySelector('#k24').value);
+let k25 = Number(document.querySelector('#k25').value);
+let k26 = Number(document.querySelector('#k26').value);
+let k27 = Number(document.querySelector('#k27').value);
+let k28 = Number(document.querySelector('#k28').value);
+let k29 = Number(document.querySelector('#k29').value);
+let k30 = Number(document.querySelector('#k30').value);
+let k31 = Number(document.querySelector('#k31').value);
+let k32 = Number(document.querySelector('#k32').value);
+
+let y1 =k1*k17;
+let y2 =k2*k21;
+let y3 =k3*k25;
+let y4 =k4*k29;
+let y5=k1*k18;
+let y6 =k2*k22;
+let y7 =k3*k26;
+let y8 =k4*k30;    
+let y9 =k1*k19;
+let y10 =k2*k23;
+let y11 =k3*k27;
+let y12 =k4*k31;
+let y13 =k1*k20;
+let y14 =k2*k24;
+let y15 =k3*k28;
+let y16 =k4*k32;
+let y17 =k5*k17;
+let y18 =k6*k21;
+let y19 =k7*k25;
+let y20 =k8*k29;
+let y21 =k5*k18;
+let y22 =k6*k22;
+let y23 =k7*k26;
+let y24 =k8*k30;
+let y25=k5*k19;
+let y26 =k6*k23;
+let y27 =k7*k27;
+let y28 =k8*k31;
+let y29 =k5*k20;
+let y30 =k6*k24;
+let y31 =k7*k28;
+let y32 =k8*k32;
+
+let y33 =k9*k17;
+let y34 =k10*k21;
+let y35 =k11*k25;
+let y36 =k12*k29;
+let y37=k9*k18;
+let y38 =k10*k22;
+let y39 =k11*k26;
+let y40 =k12*k30;    
+let y41 =k9*k19;
+let y42 =k10*k23;
+let y43 =k11*k27;
+let y44 =k12*k31;
+let y45 =k9*k20;
+let y46 =k10*k24;
+let y47 =k11*k28;
+let y48 =k12*k32;
+let y49 =k13*k17;
+let y50 =k14*k21;
+let y51 =k15*k25;
+let y52 =k16*k29;
+let y53 =k13*k18;
+let y54 =k14*k22;
+let y55 =k15*k26;
+let y56 =k16*k30;
+let y57=k13*k19;
+let y58 =k14*k23;
+let y59 =k15*k27;
+let y60 =k16*k31;
+let y61 =k13*k20;
+let y62 =k14*k24;
+let y63 =k15*k28;
+let y64 =k16*k32;
+
+
+
+
+
+let r1 = y1+y2+y3+y4;
+let r2 = y5+y6+y7+y8;
+let r3 = y9+y10+y11+y12;
+let r4 = y13+y14+y15+y16;
+let r5 = y17+y18+y19+y20;
+let r6 = y21+y22+y23+y24;
+let r7 = y25+y25+y27+y28;
+let r8 = y29+y30+y31+y32;
+let r9 = y33+y34+y35+y36;
+let r10 = y37+y38+y39+y40;
+let r11 = y41+y42+y43+y44;
+let r12 =y45+y46+y47+y48;
+let r13 = y49+y50+y51+y52;
+let r14 = y53+y54+y55+y56;
+let r15 = y57+y58+y59+y60;
+let r16 = y61+y62+y63+y64;
+
+document.querySelector('#k33').innerHTML=r1;
+document.querySelector('#k34').innerHTML=r2 ;
+document.querySelector('#k35').innerHTML=r3 ;
+document.querySelector('#k36').innerHTML=r4;
+document.querySelector('#k37').innerHTML=r5;
+document.querySelector('#k38').innerHTML=r6 ;
+document.querySelector('#k39').innerHTML=r7 ;
+document.querySelector('#k40').innerHTML=r8;
+document.querySelector('#k41').innerHTML=r9;
+document.querySelector('#k42').innerHTML=r10;
+document.querySelector('#k43').innerHTML=r11;
+document.querySelector('#k44').innerHTML=r12;
+document.querySelector('#k45').innerHTML=r13;
+document.querySelector('#k46').innerHTML=r14;
+document.querySelector('#k47').innerHTML=r15 ;
+document.querySelector('#k48').innerHTML=r16;
+
+
+
+}
+    </script>
+    
+    
+    
+    
+    
+    
+    </body>
+    </html>
